@@ -1,0 +1,49 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day","Namaste"],
+         "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {"tag": "Soil Testing",
+         "patterns": ["TELL ME ABOUT TAKING SOIL SAMPLE ", "How to take soil sample?" , "What is the technique used in taking soil sample"],
+         "responses": ["DEEG 6-9 INCH DEEP `V` SHAPE PIT AND TACKING 500 GM SOIL SAMPLE FOR TESTING SOIL", "Dig out a wedge of soil about 6 to 8 inches deep, and set this wedge aside.. Now dig out a half-inch piece of soil from the hole and pour it into your bucket."]
+        },
+        {"tag": "Nutrient Management",
+         "patterns": ["TELL ME SOMETHING ABOUT NUTRIENT MANAGEMENT ?", "What are some ways to improve nutrients in soil","How to manage nutrients" ],
+         "responses": ["SPRAY OF ZINK SULPHATE 5 GRAM +UREA 10 GRAM PER LITER WATER", "SPRAY OF SOLUBLE NPK  18:18:18 GRADE 10 GM/LTR WATER", "SPRAY OF MULTIPLAX (MICRONUTRIENT) 4 ML PER LITER WATER"]
+        },
+        {"tag": "Plant Protection",
+         "patterns": ["TELL ME HOW TO CONTROL INSECT IN WHEAT", "What are some ways to control insects in wheat"],
+         "responses": ["You can use fumigants like methyl bromide and magnesium or aluminium phosphide"]
+        },
+        {"tag": "Subsidy",
+         "patterns": [ "GIVE ME SOME INFORMATION ON SUBSIDIES","What are some various subsidy data? "],
+         "responses": ["Do you need subsidy value for solar plant, farm pond or pipe line ? "],
+         "context_set": "subsidyinfo"
+        },
+        {"tag": "farm pond",
+         "patterns": ["Farm pond" ],
+         "responses": ["SUBSIDY ON FARM POND = 50% OF TOTAL COST OR 75000/- MAXIMUM"],
+         "context_filter": "subsidyinfo"
+        },
+        {"tag": "solar plant",
+         "patterns": ["Solar plant"],
+         "responses": ["SUBSIDY ON SOLAR PLANT=70% OF TOTAL COST"],
+         "context_filter": "subsidyinfo"
+        },
+		{"tag": "pipe line",
+		 "patterns": ["Pipe line"],
+		 "responses": ["SUBSIDY ON PIPE LINE= 50% OF TOTAL COST OR 15000/- MAXIMUM"],
+		 "context_filter": "subsidyinfo"
+		}
+   ]
+}
+
